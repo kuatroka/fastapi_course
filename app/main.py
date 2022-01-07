@@ -6,14 +6,15 @@ from random import randrange
 import psycopg2
 from psycopg2.extras import RealDictCursor
 import time
-from passlib.context import CryptoContext
+# from passlib.context import CryptoContext
+from passlib.context import CryptContext
 # database stuff
 from sqlalchemy.orm import Session
 from app import schemas
 from . import models, schemas
 from .database import engine, get_db
 
-pwd_context = CryptoContext(schemes=["bcrypt"], deprecated=auto)
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 models.Base.metadata.create_all(bind=engine)
 
 
