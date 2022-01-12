@@ -3,3 +3,4 @@ app/__pychache__/
 \app\__pycache__
 venv/
 .env
+.vscode
