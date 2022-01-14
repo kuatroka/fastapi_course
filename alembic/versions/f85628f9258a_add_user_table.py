@@ -23,8 +23,8 @@ def upgrade():
         sa.Column("created_at",
                   sa.TIMESTAMP(timezone=True),
                   nullable=False,
-                  server_default=sa.text('now()')),
-        sa.PrimaryKeyConstraint("id"), sa.UniqueConstraint("email"))
+                  server_default=sa.func.now()), sa.PrimaryKeyConstraint("id"),
+        sa.UniqueConstraint("email"))
     pass
 
 
