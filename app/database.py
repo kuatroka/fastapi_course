@@ -1,3 +1,4 @@
+import imp
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -18,6 +19,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
+
 # Dependency
 def get_db():
     db = SessionLocal()
@@ -25,6 +27,7 @@ def get_db():
         yield db
     finally:
         db.close()
+
 
 # connect to DB through direct SQL and not SQLAlchemy
 # while True:
