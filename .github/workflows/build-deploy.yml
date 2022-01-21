@@ -7,14 +7,14 @@ jobs:
     environment: 
       name: testing
     env:
-      DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME:}} # it's the same name as our DB service section
-      DATABASE_PORT: ${{secrets.DATABASE_HOSTNAME:}}
-      DATABASE_PASSWORD: ${{secrets.DATABASE_HOSTNAME:}}
-      DATABASE_NAME: ${{secrets.DATABASE_HOSTNAME:}}
-      DATABASE_USERNAME: ${{secrets.DATABASE_HOSTNAME:}}
-      SECRET_KEY: ${{secrets.DATABASE_HOSTNAME:}}
-      ALGORITHM: ${{secrets.DATABASE_HOSTNAME:}} 
-      ACCESS_TOKEN_EXPIRE_MINUTES: ${{secrets.DATABASE_HOSTNAME:}}
+      DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}} # it's the same name as our DB service section
+      DATABASE_PORT: ${{secrets.DATABASE_PORT}}
+      DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
+      DATABASE_NAME: ${{secrets.DATABASE_NAME}}
+      DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
+      SECRET_KEY: ${{secrets.SECRET_KEY}}
+      ALGORITHM: ${{secrets.ALGORITHM}} 
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${{secrets.ACCESS_TOKEN_EXPIRE_MINUTES}}
     runs-on: ubuntu-latest
     steps:
       - name: pulling git repo  
