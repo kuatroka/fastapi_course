@@ -64,6 +64,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_course:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_course:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_course:buildcache,mode=max
+          cache-from: type=registry,ref=${{secrets.DOCKER_HUB_USERNAME }}/fastapi_course:buildcache
+          cache-to: type=registry,ref=${{secrets.DOCKER_HUB_USERNAME }}/fastapi_course:buildcache,mode=max
         
